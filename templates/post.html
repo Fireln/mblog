@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load markdown_deux_tags %}
+{% block title %}
+    {{post.title}}
+{% endblock %}
+
+{% block headermessage %}
+    <h2 style="font-family:微软雅黑">{{post.title}}</h2>
+{% endblock %}
+
+{% block content %}
+    <p style="font-family:微软雅黑">
+        {{post.body | markdown}}
+    </p>
+{% endblock %}

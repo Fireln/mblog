@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% block title %}
+    编写博客
+{% endblock %}
+
+{% block headermessage %}
+    编写博客
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="/wblog">
+        {% csrf_token %}
+        <span>标题</span>
+        <input type="text" name="title">
+        <br>
+        <span>选择分组</span>
+        <select name="group">
+            {% for group in groups %}
+                <option >{{group.group_name}}</option>
+            {% endfor %}
+        </select><br />
+        <span>内容</span>
+        <br>
+        <input type="text" style="height:100%" name="content">
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}
