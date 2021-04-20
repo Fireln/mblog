@@ -16,7 +16,7 @@ markdown2==2.3.4
 MarkupSafe==1.0
 multidict==2.1.4
 psycopg2==2.7.1
-py==1.4.33
+py==1.10.0
 PyMySQL==0.7.11
 pytest==3.0.7
 pytz==2017.2
